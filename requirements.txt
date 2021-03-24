@@ -13,7 +13,6 @@ itsdangerous==1.1.0
 Jinja2==2.11.3
 MarkupSafe==1.1.1
 oauthlib==3.1.0
-posrocket @ git+git://github.com/posrocket/posrocket-python-sdk.git@6e8f661279cff5f6c10b1d5498e0fe3eb6a67ae9
 psycopg2==2.7.7
 psycopg2-binary==2.8.6
 pudb==2020.1
