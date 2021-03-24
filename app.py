@@ -34,12 +34,12 @@ class Feedback(db.Model):
         self.comments = comments
 
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')
 
 
-@app.route('/submit', methods=['POST', 'GET'])
+@app.route('/submit', methods=['POST'])
 def submit():
     if request.method == 'POST':
         customer = request.form['customer']
