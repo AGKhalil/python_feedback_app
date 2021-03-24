@@ -34,7 +34,7 @@ class Feedback(db.Model):
         self.comments = comments
 
 
-@app.route('/', methods=['GET'])
+@app.route('/')
 def index():
     return render_template('index.html')
 
