@@ -41,7 +41,7 @@ def index():
 
 @app.route('/webhook', methods=['POST'])
 def respond():
-    return render_template('success.html', variable=request.json)
+    return render_template('webhook.html', variable=request.json)
 
 
 @app.route('/submit', methods=['POST'])
