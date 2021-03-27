@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Response
 from flask_sqlalchemy import SQLAlchemy
 from send_mail import send_mail
 
@@ -37,6 +37,12 @@ class Feedback(db.Model):
 @app.route('/')
 def index():
     return render_template('index.html')
+
+
+@app.route('/webhook', methods=['POST'])
+def respond():
+    print(request.json)
+    return Response(status=200)
 
 
 @app.route('/submit', methods=['POST'])
