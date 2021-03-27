@@ -41,7 +41,7 @@ def index():
 
 @app.route('/webhook', methods=['POST'])
 def respond():
-    return render_template('webhook.html', variable="FUCK")
+    return "FUCK"
 
 
 @app.route('/submit', methods=['POST'])
