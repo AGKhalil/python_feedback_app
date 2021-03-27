@@ -51,7 +51,7 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/transaction:sale:read', methods=['POST'])
+@app.route('/transaction/sale/read', methods=['POST'])
 def respond():
     print_to_stdout("FUUUUCK")
     return render_template('webhook.html', variable="FUCK")
