@@ -2,6 +2,18 @@ from flask import Flask, render_template, request, Response
 from flask_sqlalchemy import SQLAlchemy
 from send_mail import send_mail
 
+import sys
+
+
+def print_to_stdout(*a):
+
+    # Here a is the array holding the objects
+    # passed as the arguement of the function
+    print(*a, file=sys.stdout)
+
+
+print_to_stdout("Hello World")
+
 app = Flask(__name__)
 
 ENV = 'prod'
@@ -41,6 +53,7 @@ def index():
 
 @app.route('/transaction:sale:read', methods=['POST'])
 def respond():
+    print_to_stdout("FUUUUCK")
     return render_template('webhook.html', variable="FUCK")
 
 
